@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Senior PHP Developer Portfolio</title>
+  <meta name="description" content="Experienced Senior PHP Developer specializing in full-stack solutions, payment integrations, and scalable web applications." />
+  <style>
+    /* ===== Base Styles ===== */
+    :root {
+      --bg: #ffffff;
+      --text: #2d3748;
+      --primary: #3d111e;
+      --accent: #f3b725;
+      --card-bg: #f8f9fa;
+      --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .dark-mode {
+      --bg: #1a202c;
+      --text: #e2e8f0;
+      --card-bg: #2d3748;
+      --shadow: 0 4px 6px rgba(0,0,0,0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      width: min(90%, 1200px);
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    header {
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .toggle-mode {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    section {
+      margin: 3rem 0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    .about p {
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .skill-tag {
+      background: var(--accent);
+      color: var(--primary);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-weight: 600;
+    }
+
+    /* ===== Projects Grid ===== */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.2s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .project-card h3 {
+      padding: 1rem;
+      background: var(--primary);
+      color: white;
+    }
+
+    .project-card p {
+      padding: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid #eee;
+      color: #718096;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Venkatesan</h1>
+      <p class="tagline">Senior PHP Developer & Full-Stack Engineer</p>
+      <button class="toggle-mode" id="modeToggle">🌓 Toggle Dark Mode</button>
+    </header>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        I'm an experienced Senior PHP Developer with over 8 years of expertise in building robust, scalable, and secure web applications.
+        My strengths include full-stack development (PHP, MySQL, JavaScript, HTML/CSS), payment gateway integrations (Razorpay),
+        custom CMS solutions, and performance optimization on shared hosting environments like Hostinger.
+      </p>
+      <p>
+        I specialize in end-to-end project delivery—from architecture and API design to deployment and maintenance—with a strong focus on clean code, security, and user experience.
+      </p>
+
+      <h3 style="margin-top: 1.5rem;">Key Skills</h3>
+      <div class="skills">
+        <span class="skill-tag">PHP 8+</span>
+        <span class="skill-tag">Laravel</span>
+        <span class="skill-tag">MySQL</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">HTML5 / CSS3</span>
+        <span class="skill-tag">Razorpay Integration</span>
+        <span class="skill-tag">RESTful APIs</span>
+        <span class="skill-tag">Git / GitHub</span>
+        <span class="skill-tag">Shared Hosting (Hostinger)</span>
+        <span class="skill-tag">Responsive Design</span>
+      </div>
+    </section>
+
+    <section class="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <h3>Umayal Sarees</h3>
+          <p>E-commerce platform for traditional Indian sarees serving global customers. Features include category-based navigation, mobile-responsive UI, and Razorpay checkout integration.</p>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <h3>Sahana's Home Foods</h3>
+          <p>Food delivery website with dynamic menu management, order tracking, and seamless user experience across devices.</p>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <h3>ShopSooty</h3>
+          <p>Custom online store with integrated payment processing, inventory management, and admin dashboard built with PHP and MySQL.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Venkatesan | Senior PHP Developer | Karaikudi, Tamil Nadu, India</p>
+      <p>Email: <a href="mailto:umayalsarees@gmail.com">umayalsarees@gmail.com</a></p>
+    </footer>
+  </div>
+
+  <script>
+    // Dark mode toggle
+    const toggleBtn = document.getElementById('modeToggle');
+    const body = document.body;
+
+    // Check saved preference
+    if (localStorage.getItem('darkMode') === 'enabled') {
+      body.classList.add('dark-mode');
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('darkMode', 'enabled');
+      } else {
+        localStorage.setItem('darkMode', 'disabled');
+      }
+    });
+  </script>
+</body>
+</html>
