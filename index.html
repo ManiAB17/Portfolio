@@ -181,13 +181,6 @@
       margin-bottom: 0.5rem;
     }
 
-    .testimonial-quote {
-      font-size: 1.1rem;
-      font-style: italic;
-      margin: 1rem 0;
-      color: #4a5568;
-    }
-
     .profile-img {
       width: 300px;
       height: 300px;
@@ -200,13 +193,14 @@
 
     /* ===== SERVICES ===== */
     .services {
-      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTIxMjEyIiAvPgo8cGF0aCBkPSJNMCwwIEw1MCw1MCBMMTAwLDAgTDEwMCwxMDAgTTAsMTAwIEw1MCw1MCBMMTAwLDEwMCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuMSIgLz4KPC9zdmc+') repeat;
+      background: #121212;
       padding: 4rem 0;
       text-align: center;
+      color: white;
     }
 
     .services h2 {
-      color: var(--dark);
+      color: white;
       margin-bottom: 2rem;
       font-size: 2.2rem;
     }
@@ -223,13 +217,15 @@
     }
 
     .service-card {
-      background: rgba(255,255,255,0.95);
+      background: rgba(255,255,255,0.05);
       border-radius: 15px;
       padding: 2rem;
       box-shadow: var(--shadow);
       transition: var(--transition);
       position: relative;
       overflow: hidden;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
     }
 
     .service-card:hover {
@@ -237,21 +233,19 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.15);
     }
 
-    .service-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: contain;
+    .service-icon {
+      font-size: 2.5rem;
       margin-bottom: 1rem;
-      border-radius: 10px;
+      color: var(--accent);
     }
 
     .service-card h3 {
-      color: var(--primary);
+      color: white;
       margin-bottom: 0.5rem;
     }
 
     .service-card p {
-      color: #4a5568;
+      color: #ccc;
       font-size: 0.95rem;
     }
 
@@ -509,13 +503,14 @@
 
     /* ===== TESTIMONIALS ===== */
     .testimonials {
-      background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMTIxMjEyIiAvPgo8cGF0aCBkPSJNMCwwIEw1MCw1MCBMMTAwLDAgTDEwMCwxMDAgTTAsMTAwIEw1MCw1MCBMMTAwLDEwMCIgc3Ryb2tlPSIjZmZmIiBzdHJva2Utd2lkdGg9IjEiIG9wYWNpdHk9IjAuMSIgLz4KPC9zdmc+') repeat;
+      background: #121212;
       padding: 4rem 0;
       text-align: center;
+      color: white;
     }
 
     .testimonials h2 {
-      color: var(--light);
+      color: white;
       margin-bottom: 2rem;
       font-size: 2.2rem;
     }
@@ -546,7 +541,7 @@
       font-size: 1.1rem;
       font-style: italic;
       margin: 1rem 0;
-      color: var(--light);
+      color: white;
     }
 
     .client-info {
@@ -561,11 +556,12 @@
       height: 50px;
       border-radius: 50%;
       object-fit: cover;
+      background: #444;
     }
 
     .client-name {
       font-weight: 600;
-      color: var(--light);
+      color: white;
     }
 
     .client-role {
@@ -889,7 +885,7 @@
     <a href="#home" class="nav-item active">Home</a>
     <a href="#about" class="nav-item">About</a>
     <a href="#services" class="nav-item">Service</a>
-    <div class="logo">JC<span>Manikandan</span></div>
+    <div class="logo">Manikandan<span>PHP</span></div>
     <a href="#resume" class="nav-item">Resume</a>
     <a href="#projects" class="nav-item">Project</a>
     <a href="#contact" class="nav-item">Contact</a>
@@ -907,7 +903,7 @@
       </div>
       <div class="experience-badge">
         <div class="stars">★★★★★</div>
-        <div style="font-size: 2rem; font-weight: 700;">8 Years</div>
+        <div style="font-size: 2rem; font-weight: 700;">8+ Years</div>
         <div>Experience</div>
       </div>
       <img src="[YOUR_PHOTO_URL]" alt="Manikandan - Senior PHP Developer" class="profile-img" />
@@ -920,21 +916,21 @@
       <h2>My <span>Services</span></h2>
       <div class="services-grid">
         <div class="service-card">
-          <img src="https://via.placeholder.com/300x200?text=UI+UX+Design" alt="UI/UX Design" />
-          <h3>UI/UX Design</h3>
-          <p>Creating intuitive, user-centered interfaces that drive engagement and conversions.</p>
+          <div class="service-icon">⚙️</div>
+          <h3>Full-Stack PHP Development</h3>
+          <p>Custom web applications using PHP, MySQL, JavaScript, and modern frameworks.</p>
           <div class="arrow-btn">→</div>
         </div>
         <div class="service-card">
-          <img src="https://via.placeholder.com/300x200?text=Web+Design" alt="Web Design" />
-          <h3>Web Design</h3>
-          <p>Modern, responsive websites built with clean code and optimized performance.</p>
+          <div class="service-icon">💳</div>
+          <h3>Payment Gateway Integration</h3>
+          <p>Secure Razorpay integration with server-side validation and webhook handling.</p>
           <div class="arrow-btn">→</div>
         </div>
         <div class="service-card">
-          <img src="https://via.placeholder.com/300x200?text=Landing+Page" alt="Landing Page" />
-          <h3>Landing Page</h3>
-          <p>High-converting landing pages designed to capture leads and boost sales.</p>
+          <div class="service-icon">📱</div>
+          <h3>Responsive Web Design</h3>
+          <p>Mobile-first UIs optimized for performance on shared hosting like Hostinger.</p>
           <div class="arrow-btn">→</div>
         </div>
       </div>
@@ -949,28 +945,28 @@
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <div class="timeline-company">Cognizant, Mumbai</div>
-            <div class="timeline-period">Sep 2016 - July 2020</div>
-            <div class="timeline-role">Experience Designer</div>
-            <div class="timeline-desc">Led UI/UX initiatives for enterprise clients, focusing on usability and accessibility improvements across digital platforms.</div>
+            <div class="timeline-company">Freelance Projects</div>
+            <div class="timeline-period">2016 – Present</div>
+            <div class="timeline-role">Senior PHP Developer</div>
+            <div class="timeline-desc">Developed and maintained e-commerce platforms including Umayal Sarees, Sahana's Home Foods, and ShopSooty with full-stack PHP solutions.</div>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <div class="timeline-company">Sugee Pvt Limited, Mumbai</div>
-            <div class="timeline-period">Sep 2020 - July 2023</div>
-            <div class="timeline-role">UI/UX Designer</div>
-            <div class="timeline-desc">Designed and prototyped mobile and web applications, collaborating with developers to ensure pixel-perfect implementation.</div>
+            <div class="timeline-company">Umayal Sarees</div>
+            <div class="timeline-period">2020 – Present</div>
+            <div class="timeline-role">Lead Developer</div>
+            <div class="timeline-desc">Built global e-commerce site with dynamic category navigation, user profiles, and Razorpay checkout.</div>
           </div>
         </div>
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
-            <div class="timeline-company">Cinetstox, Mumbai</div>
-            <div class="timeline-period">Sep 2023 - Present</div>
-            <div class="timeline-role">Lead UX Designer</div>
-            <div class="timeline-desc">Architected end-to-end user experiences for fintech products, mentoring junior designers and driving design system adoption.</div>
+            <div class="timeline-company">Sahana's Home Foods</div>
+            <div class="timeline-period">2022 – Present</div>
+            <div class="timeline-role">Full-Stack Developer</div>
+            <div class="timeline-desc">Designed food ordering system with real-time menu updates and secure form handling.</div>
           </div>
         </div>
       </div>
@@ -980,16 +976,204 @@
   <!-- Why Hire Me -->
   <section class="why-hire">
     <div class="container">
-      <h2>Why <span>Hire me?</span></h2>
+      <h2>Why <span>Hire Me?</span></h2>
       <div class="why-content">
         <div class="why-item">
           <img src="[YOUR_PHOTO_URL]" alt="Manikandan" class="why-image" />
         </div>
         <div class="why-item">
-          <div class="why-number">450+</div>
+          <div class="why-number">50+</div>
           <div class="why-label">Projects Completed</div>
         </div>
         <div class="why-item">
-          <div class="why-number">450+</div>
-          <div class="why-label">Projects Completed</div>
-       
+          <div class="why-number">100%</div>
+          <div class="why-label">Client Satisfaction</div>
+        </div>
+        <div class="why-item">
+          <div class="why-number">8+</div>
+          <div class="why-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section class="portfolio" id="projects">
+    <div class="container">
+      <div class="portfolio-header">
+        <h2>My <span>Portfolio</span></h2>
+        <a href="#" class="see-all-btn">See All →</a>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/300x200?text=Umayal+Sarees" alt="Umayal Sarees" />
+          <div class="portfolio-overlay">
+            <div class="portfolio-title">Umayal Sarees</div>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/300x200?text=Sahana%27s+Home+Foods" alt="Sahana's Home Foods" />
+          <div class="portfolio-overlay">
+            <div class="portfolio-title">Sahana's Home Foods</div>
+          </div>
+        </div>
+        <div class="portfolio-item">
+          <img src="https://via.placeholder.com/300x200?text=ShopSooty" alt="ShopSooty" />
+          <div class="portfolio-overlay">
+            <div class="portfolio-title">ShopSooty</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials">
+    <div class="container">
+      <h2>Client <span>Testimonials</span></h2>
+      <div class="testimonials-slider">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-quote">“Manikandan delivered our e-commerce site on time with flawless Razorpay integration. Highly recommended!”</div>
+          <div class="client-info">
+            <div class="client-avatar"></div>
+            <div>
+              <div class="client-name">Client A</div>
+              <div class="client-role">E-commerce Owner</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <div class="testimonial-quote">“Professional, responsive, and deeply knowledgeable in PHP. Fixed critical bugs in hours.”</div>
+          <div class="client-info">
+            <div class="client-avatar"></div>
+            <div>
+              <div class="client-name">Client B</div>
+              <div class="client-role">Startup Founder</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Discussion -->
+  <section class="project-discussion" id="contact">
+    <div class="container">
+      <h2>Let’s Discuss Your <span>Project</span></h2>
+      <p>Get in touch for a free consultation</p>
+      <div class="contact-form">
+        <input type="email" class="email-input" placeholder="Your email address" />
+        <button class="send-btn">Send →</button>
+      </div>
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-number">50+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">8+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="blog">
+    <div class="container">
+      <div class="blog-header">
+        <h2>Latest <span>Blog</span></h2>
+        <a href="#" class="see-all-btn">See All →</a>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-post">
+          <img src="https://via.placeholder.com/300x200?text=Razorpay+Integration" alt="Razorpay Guide" />
+          <div class="blog-content">
+            <span class="blog-category">PHP</span>
+            <div class="blog-date">📅 Jan 10, 2026</div>
+            <h3 class="blog-title">Secure Razorpay Integration in PHP</h3>
+            <p class="blog-excerpt">Step-by-step guide to implementing server-side verification and webhooks.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+        <div class="blog-post">
+          <img src="https://via.placeholder.com/300x200?text=Hostinger+Optimization" alt="Hostinger Tips" />
+          <div class="blog-content">
+            <span class="blog-category">Hosting</span>
+            <div class="blog-date">📅 Dec 28, 2025</div>
+            <h3 class="blog-title">Optimizing PHP Apps on Hostinger</h3>
+            <p class="blog-excerpt">Best practices for performance on shared hosting environments.</p>
+            <a href="#" class="read-more">Read More →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <div class="footer-logo">Manikandan<span>PHP</span></div>
+          <p class="footer-about">Senior PHP Developer based in Karaikudi, Tamil Nadu. Specializing in e-commerce, APIs, and payment integrations.</p>
+          <div class="social-icons">
+            <span class="social-icon">📧</span>
+            <span class="social-icon">📱</span>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Portfolio</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#">PHP Development</a></li>
+            <li><a href="#">Razorpay Integration</a></li>
+            <li><a href="#">API Development</a></li>
+            <li><a href="#">Website Maintenance</a></li>
+          </ul>
+        </div>
+        <div class="newsletter">
+          <h4>Newsletter</h4>
+          <input type="email" placeholder="Your email" />
+          <button>Subscribe</button>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Manikandan. Designed & Built with ❤️ in Karaikudi, Tamil Nadu.</p>
+        <p>Email: <a href="mailto:umayalsarees@gmail.com">umayalsarees@gmail.com</a> | Phone: +91 9159741502</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Form submission (optional)
+    document.querySelector('.send-btn')?.addEventListener('click', () => {
+      alert('Thank you! I’ll get back to you soon.');
+    });
+  </script>
+</body>
+</html>
